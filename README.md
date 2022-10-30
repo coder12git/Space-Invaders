@@ -27,7 +27,7 @@ The user plays the role of a Jedi, defeating the aliens with his lightsaber! To 
 ## What we learnt 📚
 Teamwork makes the dream work!
 
-## What's next for Space Invaders?
+## What's next for Space Invaders?🔥
 Trying out a bunch of motion detection technologies like eye and hand movement detection!!
 
 ## Team Members:
