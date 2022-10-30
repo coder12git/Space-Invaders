@@ -1,7 +1,11 @@
-
 import pygame, sys, time, random
 from pygame.locals import *
 from pygame import mixer
+from cvzone.HandTrackingModule import HandDetector
+import cv2
+
+cap = cv2.VideoCapture(0)
+detector = HandDetector(detectionCon=0.8, maxHands=1)
 
 # set up the colors
 BLACK = (0, 0, 0)
@@ -42,11 +46,11 @@ def invadersMovement(invaders, invaderMovementCoordList, invadersBasePos, sinceL
     sinceLastMovedInvaders = 0
     return invaders, invaderMovementCoordList, sinceLastMovedInvaders
         
-def spaceShipMovement(moveLeft, moveRight, spaceShip, upgrades):
-    if moveLeft == True and spaceShip['rect'].left > 0:
+def spaceShipMovement(spaceShip, upgrades, handType1):
+    if handType1=="Left" and spaceShip['rect'].left > 0:
         spaceShip['rect'].left -= (35 + upgrades[1])
         
-    if moveRight == True and spaceShip['rect'].right < 1400:
+    if handType1=="Right" and spaceShip['rect'].right < 1400:
         spaceShip['rect'].right += (35 + upgrades[1])
 
     return spaceShip
@@ -432,13 +436,32 @@ def main():
     resetTime = 0
     projectileInputHappened = False
     gameOverUser = False
-    
+    handType1 = None    
 
     #BulletSpeed, UserSpeed
     upgrades = [0,0]
     
     nextLevel = True
     while True:
+
+    # Get image frame
+        success, img = cap.read()
+    # Find the hand and its landmarks
+        hands, img = detector.findHands(img) # with draw
+    #hands = detector.findHands(img, draw=False) # without draw
+        if hands:
+        # Hand 1
+            hand1 = hands[0]
+            lmList1 = hand1["lmList"]  # List of 21 Landmark points
+            bbox1 = hand1["bbox"]  # Bounding box info x,y,w,h
+            centerPoint1 = hand1['center']  # center of the hand cx,cy
+            handType1 = hand1["type"]  # Handtype Left or Right
+            fingers1 = detector.fingersUp(hand1)
+        # Display
+        cv2.imshow("Image", img)
+        if cv2.waitKey(1) == ord('q'):
+            break
+        
         for event in pygame.event.get():
             if event.type == QUIT:
                 pygame.quit()
@@ -542,7 +565,7 @@ def main():
             sinceLastMovedInvaders +=1
             
             #Everything involving the S.S. spaceShip
-            spaceShip = spaceShipMovement(moveLeft, moveRight, spaceShip, upgrades)
+            spaceShip = spaceShipMovement(spaceShip, upgrades, handType1)
 
             if sinceLastMovedInvaders > invadersMovementTime:
                 #Everything involving the general movment of the invaders
@@ -599,5 +622,6 @@ def main():
 
     # draw the window onto the screen
     pygame.display.update()
-    
+    cap.release()
+    cv2.destroyAllWindows()
 main()
