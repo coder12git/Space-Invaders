@@ -1,4 +1,4 @@
-# Space-Invaders👾
+# Space Invaders👾
 
 This project is submitted for [MLH - Hack from the Past 2 2022 Hackathon](https://hack-from-the-past-2.devpost.com/)
 
@@ -30,10 +30,9 @@ Teamwork makes the dream work!
 ## What's next for Space Invaders?🔥
 Trying out a bunch of motion detection technologies like eye and hand movement detection!!
 
-## Team Members:
-<a href="https://github.com/coder12git/Space-Invaders/graphs/contributors">
-  <img src="https://contrib.rocks/image?repo=coder12git/Space-Invaders"/>
-</a>
+Here's the small demo of **Space Invaders**. [YouTube Link](https://youtu.be/fnjdG2sTfmU)
+
+Copyrights © 2022 Space Invaders. 
 
 ## Show your support
 
