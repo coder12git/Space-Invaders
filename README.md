@@ -1,13 +1,13 @@
-# Space-Invaders
+# Space-Invaders👾
 
 This project is submitted for [MLH - Hack from the Past 2 2022 Hackathon](https://hack-from-the-past-2.devpost.com/)
 
 ---
 
-## Inspiration 
+## Inspiration ✨
 The retro theme reminded us of 2 things. Our favorite childhood game Space Invaders and our favorite movie Star Wars. This inspired our project which is renovated Space Invaders in Star Wars theme with motion detection!
 
-## What it does?
+## What it does?👨‍💻
 The user plays the role of a Jedi, defeating the aliens with his lightsaber! To modernize it, we decided to use mouse controls instead of the classic keypad. We wanted to try more motion detection techniques but the time was limited and we could not implement it.
  
 ## How we built it ⚙️
