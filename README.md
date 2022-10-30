@@ -33,8 +33,6 @@ Trying out a bunch of motion detection technologies like eye and hand movement d
 ## Team Members:
 <a href="https://github.com/coder12git/Space-Invaders/graphs/contributors">
   <img src="https://contrib.rocks/image?repo=coder12git/Space-Invaders"/>
-  <img src="https://contrib.rocks/image?repo=coder12git/Space-Invaders"/>
-  <img src="https://contrib.rocks/image?repo=coder12git/Space-Invaders"/>
 </a>
 
 ## Show your support
