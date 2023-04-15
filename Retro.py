@@ -21,7 +21,7 @@ LEMON = (255,250,205)
 YELLOW = (255,255,0)
 DARKGREEN = (0,128,0)
 
-#3 rows of 6
+#3 rows of 6 alien spaceships
 
 def createInvadersBasePos(invadersBasePos):
     
@@ -96,6 +96,7 @@ def invaderProjectiles(invaders, invadersLastFired, invaderProjectile):
         invaderProjectile['rect'].top += 10
         return invadersLastFired, invaderProjectile
 
+#dodging bullets
 
 def collisionDetection(projectileIDs, invaders, spaceShip, invaderProjectile, userLives, defenderWallList, invadersBasePos, userScore):
     z = -1
@@ -188,6 +189,7 @@ def drawObjects(sinceLastSwitch,basicFont, windowSurface, projectileIDs, invader
     pygame.draw.rect(windowSurface, BLACK, invaderProjectile['rect'])
     windowSurface.blit(invaderBullet,invaderProjectile['rect'])
     
+#End Game
 
 def isGameOver(userLives, gameOver, invaders, message, allInvadersDead, invaderMovementCoordList):
 
@@ -230,7 +232,9 @@ def saveGameFunction(userLives, userScore, upgrades):
     if len(str(userScore)) == 4:
         start2 = "0"        
     f.write(start1 + str(userLives)+start2 + userScore +upgrades1 + upgrades2)
-                                              
+
+# UI
+
 def renderMainMenu(menuMainPosition, scrollDown, scrollUp,startNewGame, loadGame, windowSurface, fireProjectile, basicFont):
 
 
