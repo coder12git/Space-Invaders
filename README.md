@@ -33,7 +33,7 @@ Teamwork makes the dream work!
 ## What's next for Space Invaders?🔥
 Trying out a bunch of motion detection technologies like eye and hand movement detection!!
 
-Here's the small demo of **Space Invaders**. [YouTube Link](https://youtu.be/E8uBVuOM_Bc)
+Here's the small demo of **Space Invaders**. [YouTube Link](https://youtu.be/u7S0IbsrKB4)
 
 Copyrights © 2022 Space Invaders. 
 
