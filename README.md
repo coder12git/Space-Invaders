@@ -1,6 +1,6 @@
 # Space Invaders👾
 
-This project is submitted for [MLH - Hack from the Past 2 2022 Hackathon](https://hack-from-the-past-2.devpost.com/)
+[Demo](https://youtu.be/u7S0IbsrKB4)
 
 ---
 
